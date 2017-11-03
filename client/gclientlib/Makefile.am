@@ -33,7 +33,7 @@ libgclient_la_SOURCES = gclient.cxx gclient.h \
 			posix_helpers.h posix_helpers.cxx 
 
 
-libgclient_la_LIBADD = $(SHELL_LIBS) -L$(XROOTD_LOCATION)/lib$(MARK64) -lXrdSec -lXrdClient -lXrdUtils $(OPENSSLLIB) $(LIBSSL_LIBCRYPTO) -ldl
+libgclient_la_LIBADD = $(SHELL_LIBS) -L$(XROOTD_LOCATION)/lib$(MARK64) -lXrdSec-4 -lXrdClient -lXrdUtils $(OPENSSLLIB) $(LIBSSL_LIBCRYPTO) -ldl
 
 if ENABLE_PERLMODULE
 
