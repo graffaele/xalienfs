@@ -22,7 +22,7 @@ xAlienWorker_LDFLAGS = -static -export-dynamic $(PERL_LDOPTS)
 lib_LTLIBRARIES = libXrdxAlienFs.la
 
 libXrdxAlienFs_la_SOURCES = XrdxAlienFs.cc XrdxAlienFs.hh XrdxAlienTiming.hh XrdxAlienConfig.cc XrdxAlienTrace.hh
-libXrdxAlienFs_la_LIBADD = $(top_srcdir)/base/cwccrypt/libcwccrypt.la $(top_srcdir)/base/ShmAuth/libUI-ShmAuth.la $(top_srcdir)/base/CODEC/libUI-CODEC.la -L$(XROOTD_LOCATION)/lib$(MARK64)/  -lXrdUtils -lXrdOfs -lcrypto -luuid -L$(ALIEN_LOCATION)/lib$(MARK64)/
+libXrdxAlienFs_la_LIBADD = $(top_srcdir)/base/cwccrypt/libcwccrypt.la $(top_srcdir)/base/ShmAuth/libUI-ShmAuth.la $(top_srcdir)/base/CODEC/libUI-CODEC.la -L$(XROOTD_LOCATION)/lib$(MARK64)/  -lXrdUtils -lXrdThrottle-4 -lcrypto -luuid -L$(ALIEN_LOCATION)/lib$(MARK64)/
 libXrdxAlienFs_la_LDFLAGS = 
 
 install-exec-local:	
